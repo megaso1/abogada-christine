@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ============================================================
+       REPLACE: Update the title tag with the lawyer's full name
+       ============================================================ -->
+  <title>Abogada Christine Soto</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Fonts: Cormorant Garant (display) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+
+  <!-- ============================================================
+       HEADER — Fixed navigation bar
+       ============================================================ -->
+  <header id="header">
+    <nav class="nav-container">
+
+      <!-- LOGO — Replace the image src with your logo file, e.g. src="logo.png"
+           Or simply replace the text inside <span> with your initials/firm name -->
+      <a href="#home" class="logo" aria-label="Go to home">
+        <!-- INSERT LOGO IMAGE HERE (optional) -->
+        <!-- <img src="logo.png" alt="Logo" class="logo-img" /> -->
+        <img src="logo-abogada.png" class="logo-img">
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <ul class="nav-links" role="list">
+        <li><a href="#home"     class="nav-link">Inicio</a></li>
+        <li><a href="#about"    class="nav-link">Sobre mí</a></li>
+        <li><a href="#services" class="nav-link">Servicios</a></li>
+        <li><a href="#contact"  class="nav-link">Contacto</a></li>
+      </ul>
+
+      <!-- Hamburger button (mobile only) -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </nav>
+
+    <!-- Mobile drawer menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <ul role="list">
+        <li><a href="#home"     class="mobile-link">Home</a></li>
+        <li><a href="#about"    class="mobile-link">About</a></li>
+        <li><a href="#services" class="mobile-link">Services</a></li>
+        <li><a href="#contact"  class="mobile-link">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+
+  <!-- ============================================================
+       HERO SECTION — #home
+       ============================================================ -->
+  <section id="home" class="hero">
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">
+        <!-- REPLACE: Your professional title or tagline -->
+        Abogada especializada en derecho civil y laboral
+      </p>
+
+      <!-- REPLACE NAME HERE -->
+      <h1 class="hero-name">Christine Soto</h1>
+
+      <p class="hero-subtitle">
+        <!-- REPLACE: Your main value proposition (1–2 lines) -->
+        Servicios de asesoramiento legal<br />
+      </p>
+
+      <p class="hero-description">
+        <!-- REPLACE: Short 2–3 sentence bio or firm description -->
+        Soy Christine Soto, abogada dedicada a brindar asesoramiento legal de alta calidad a todo tipo de personas. 
+        Con años de experiencia en derecho civil y laboral, me comprometo a ofrecer soluciones efectivas y personalizadas para cada caso. 
+        Mi enfoque se basa en la comunicación clara y la defensa apasionada de los intereses de mis clientes.
+      </p>
+
+      <a href="#contact" class="btn-primary">Solicitar Asesoría</a>
+    </div>
+
+    <!-- Profile / Hero Image -->
+    <div class="hero-image-wrapper">
+      <!-- INSERT IMAGE HERE
+           Replace "placeholder" div with:
+           <img src="your-photo.jpg" alt="Jane A. Doe — Attorney at Law" class="hero-img" />
+      -->
+      <div class="hero-img-placeholder" aria-label="Profile photo placeholder">
+        <span>Your Photo Here</span>
+      </div>
+    </div>
+
+    <!-- Decorative vertical rule -->
+    <div class="hero-rule" aria-hidden="true"></div>
+
+  </section>
+
+
+  <!-- ============================================================
+       ABOUT SECTION — #about
+       ============================================================ -->
+  <section id="about" class="about">
+
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <h2 class="section-title">Sobre mí</h2>
+    </div>
+
+    <div class="about-grid">
+
+      <!-- Left column: main bio -->
+      <div class="about-bio">
+        <h3 class="about-heading">
+          <!-- REPLACE: Compelling one-liner about yourself -->
+          A Trusted Advocate<br /><em>in Every Courtroom</em>
+        </h3>
+        <p>
+          <!-- REPLACE: Your background paragraph (2–4 sentences) -->
+          Jane A. Doe has built a reputation for thorough preparation,
+          straightforward advice, and relentless advocacy. Having represented
+          clients across a wide spectrum of civil and labour disputes, she
+          approaches every case as if it were her own.
+        </p>
+        <p>
+          <!-- REPLACE: Second background paragraph -->
+          Her client-first philosophy means clear communication at every stage —
+          no legal jargon, no surprises — just a committed partner standing
+          beside you from the first consultation to final resolution.
+        </p>
+      </div>
+
+      <!-- Right column: credentials -->
+      <div class="about-credentials">
+
+        <!-- EDUCATION -->
+        <div class="credential-block">
+          <h4 class="credential-label">Education</h4>
+          <ul class="credential-list">
+            <!-- REPLACE: Your degrees and institutions -->
+            <li>
+              <strong>J.D., Magna Cum Laude</strong>
+              <span>Harvard Law School, 2006</span>
+            </li>
+            <li>
+              <strong>B.A. Political Science</strong>
+              <span>Yale University, 2003</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- EXPERIENCE -->
+        <div class="credential-block">
+          <h4 class="credential-label">Experience</h4>
+          <ul class="credential-list">
+            <!-- REPLACE: Your work history -->
+            <li>
+              <strong>Senior Partner</strong>
+              <span>Doe & Associates, 2015 – Present</span>
+            </li>
+            <li>
+              <strong>Associate Attorney</strong>
+              <span>Whitmore Legal Group, 2008 – 2015</span>
+            </li>
+            <li>
+              <strong>Law Clerk</strong>
+              <span>U.S. District Court, 2006 – 2008</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- BAR ADMISSIONS / MEMBERSHIPS -->
+        <div class="credential-block">
+          <h4 class="credential-label">Bar Admissions</h4>
+          <ul class="credential-list">
+            <!-- REPLACE: Your bar admissions or memberships -->
+            <li><strong>State Bar of New York</strong></li>
+            <li><strong>American Bar Association</strong></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       SERVICES SECTION — #services
+       ============================================================ -->
+  <section id="services" class="services">
+
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <h2 class="section-title">Servicios</h2>
+    </div>
+
+    <p class="services-intro">
+      <!-- REPLACE: A one-line intro for the services section -->
+      Comprehensive legal counsel tailored to your specific situation.
+    </p>
+
+    <div class="services-grid">
+
+      <!-- SERVICE CARD 1 — REPLACE title and description -->
+      <article class="service-card">
+        <span class="service-icon" aria-hidden="true">⚖</span>
+        <h3 class="service-title">Labor Law</h3>
+        <p class="service-desc">
+          Representation in wrongful termination, wage disputes, workplace
+          discrimination, and collective bargaining negotiations.
+        </p>
+      </article>
+
+      <!-- SERVICE CARD 2 — REPLACE title and description -->
+      <article class="service-card">
+        <span class="service-icon" aria-hidden="true">🏛</span>
+        <h3 class="service-title">Civil Litigation</h3>
+        <p class="service-desc">
+          Skilled advocacy in contract disputes, property claims, personal injury,
+          and all phases of civil trial proceedings.
+        </p>
+      </article>
+
+      <!-- SERVICE CARD 3 — REPLACE title and description -->
+      <article class="service-card">
+        <span class="service-icon" aria-hidden="true">📋</span>
+        <h3 class="service-title">Legal Consulting</h3>
+        <p class="service-desc">
+          Strategic counsel for businesses and individuals — risk assessment,
+          contract review, regulatory compliance, and preventive legal planning.
+        </p>
+      </article>
+
+      <!-- SERVICE CARD 4 — REPLACE title and description (or remove this card) -->
+      <article class="service-card">
+        <span class="service-icon" aria-hidden="true">🏠</span>
+        <h3 class="service-title">Real Estate Law</h3>
+        <p class="service-desc">
+          Guidance through property acquisitions, lease agreements, title disputes,
+          and real estate transactions of all sizes.
+        </p>
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       CONTACT SECTION — #contact
+       ============================================================ -->
+  <section id="contact" class="contact">
+
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <h2 class="section-title">Contacto</h2>
+    </div>
+
+    <div class="contact-grid">
+
+      <!-- Left: intro message -->
+      <div class="contact-intro">
+        <h3 class="contact-heading">
+          Cuéntame<br /><em>tu caso</em>
+        </h3>
+        <p>
+          <!-- REPLACE: Short invitation message -->
+          Every legal journey begins with a conversation. Reach out through any
+          of the channels below for a confidential, no-obligation consultation.
+        </p>
+      </div>
+
+      <!-- Right: contact details -->
+      <div class="contact-details">
+
+        <!-- REPLACE EMAIL HERE -->
+        <a href="mailto:szulysc@hotmail.com" class="contact-item">
+          <span class="contact-item-label">Correo Electrónico</span>
+          <span class="contact-item-value">szulysc@hotmail.com</span>
+        </a>
+
+        <!-- REPLACE PHONE HERE -->
+        <a href="tel:+573212259969" class="contact-item">
+          <span class="contact-item-label">Teléfono</span>
+          <span class="contact-item-value">+57 321 225 9969</span>
+        </a>
+
+        
+
+        <!-- REPLACE HOURS HERE -->
+        <div class="contact-item no-link">
+          <span class="contact-item-label">Horario</span>
+          <span class="contact-item-value">
+            <!-- REPLACE: Your office hours -->
+            Lunes a viernes, 9 AM a 6 PM
+          </span>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <p>
+      <!-- REPLACE NAME HERE -->
+      &copy; <span id="year"></span> Abogada Christine Soto. Todos los derechos reservados.
+    </p>
+    <p class="footer-disclaimer">
+      <!-- REPLACE: Your disclaimer or additional info -->
+      La información en este sitio web no constituye asesoramiento legal. Para consultas específicas, por favor contácteme directamente.
+    </p>
+  </footer>
+
+
+  <!-- ============================================================
+       FLOATING WHATSAPP BUTTON
+       ============================================================
+       CHANGE PHONE NUMBER HERE:
+       Replace the "XXXXXXXXXX" in the href below with your full
+       international phone number (no spaces, no dashes, no +).
+       Example: href="https://wa.me/12125551234"
+       ============================================================ -->
+  <a
+    href="https://wa.me/573212259969?text=Hola,%20quisiera%20asesoría%20legal."
+    class="whatsapp-btn"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat on WhatsApp"
+    title="Chat on WhatsApp"
+  >
+    <!-- WhatsApp SVG icon -->
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </a>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
