@@ -1,5 +1,4 @@
-/* ================================================================
-   script.js — Lawyer Website
+/* script.js — Página web de abogada Christine
    ================================================================
    What this file does:
    1. Adds a shadow to the header when you scroll down
@@ -82,6 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
     hamburger.setAttribute('aria-expanded', 'true');
     mobileMenu.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden'; // prevent scrolling behind menu
+    header.classList.add('menu-open');
   }
 
   function closeMenu() {
@@ -90,6 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
     hamburger.setAttribute('aria-expanded', 'false');
     mobileMenu.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = ''; // restore scrolling
+    header.classList.remove('menu-open');
   }
 
   hamburger.addEventListener('click', () => {
