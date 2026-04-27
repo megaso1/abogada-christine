@@ -12,7 +12,7 @@
   --color-beige-2: #e8dfc8;
   --color-accent:  #b8a882;
   --color-text:    #1a1a1a;
-  --color-muted:   #6b6558;
+  --color-muted:   #0c0b0a;
 
   --font-display: 'Cormorant Garant', Georgia, serif;
   --font-body:    'DM Sans', system-ui, sans-serif;
@@ -102,6 +102,22 @@ ul {
 
 .section-header {
   margin-bottom: clamp(48px, 7vw, 80px);
+}
+
+.about .section-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 8vw, 100px);
+}
+
+.about .section-header > * {
+  grid-column: 2;
+}
+
+@media (max-width: 900px) {
+  .about .section-header {
+    display: block;
+  }
 }
 
 p {
@@ -450,7 +466,7 @@ p {
 .hero::before {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 75%;
   transform: translate(-50%, -50%);
 
@@ -487,6 +503,31 @@ p {
   grid-template-columns: 1fr 1fr;
   gap: clamp(40px, 8vw, 100px);
   align-items: start;
+}
+.about-watermark {
+  position: relative;
+  min-height: 320px;
+}
+
+.about-watermark::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(200px, 28vw, 360px);
+  height: clamp(200px, 28vw, 360px);
+  background-image: url("logo-abogada2.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  opacity: 0.27;
+  pointer-events: none;
+}
+
+/* Hide watermark column on tablet/mobile — single column layout */
+@media (max-width: 900px) {
+  .about-watermark { display: none; }
 }
 
 .about-heading {
@@ -710,7 +751,7 @@ a.contact-item:hover {
   font-size: 0.68rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--color-accent);
+  color: #121210;
   font-weight: 400;
 }
 
