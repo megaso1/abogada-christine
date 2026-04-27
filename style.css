@@ -742,6 +742,11 @@ a.contact-item:hover {
   margin-top: 4px;
   opacity: 0.55;
 }
+
+.footer p {
+  text-align: center;
+}
+
 .footer-dev {
   font-size: 0.7rem;
   opacity: 0.6;
