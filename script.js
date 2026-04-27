@@ -8,10 +8,6 @@
    5. Automatically sets the current year in the footer
    ================================================================ */
 
-
-/* ----------------------------------------------------------------
-   Wait for the page to fully load before running anything
-   ---------------------------------------------------------------- */
 document.addEventListener('DOMContentLoaded', () => {
 
 
@@ -19,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
      1. HEADER — Add "scrolled" class after user scrolls 40px
         This triggers the frosted-glass background in CSS.
      ============================================================== */
+
   const header = document.getElementById('header');
 
   function handleHeaderScroll() {
@@ -29,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Run once on load (in case the page starts scrolled)
   handleHeaderScroll();
   window.addEventListener('scroll', handleHeaderScroll, { passive: true });
 
@@ -38,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
      2. ACTIVE NAV LINK — Highlights the current section link
         Updates as you scroll through each section.
      ============================================================== */
+
   const navLinks    = document.querySelectorAll('.nav-link');
   const sections    = document.querySelectorAll('section[id]');
 
@@ -46,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollY = window.scrollY;
 
     sections.forEach(section => {
-      // Offset accounts for the fixed header height
       const sectionTop = section.offsetTop - 100;
       if (scrollY >= sectionTop) {
         currentSection = section.getAttribute('id');
@@ -55,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     navLinks.forEach(link => {
       link.classList.remove('active');
-      // Match the href="#sectionId" against the current section
       if (link.getAttribute('href') === `#${currentSection}`) {
         link.classList.add('active');
       }
@@ -67,10 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ==============================================================
      3. MOBILE HAMBURGER MENU
-        - Clicking the hamburger opens the full-screen mobile menu
-        - Clicking any mobile link closes the menu
-        - Body scroll is locked while the menu is open
      ============================================================== */
+
   const hamburger  = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
   const mobileLinks = document.querySelectorAll('.mobile-link');
@@ -80,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileMenu.classList.add('open');
     hamburger.setAttribute('aria-expanded', 'true');
     mobileMenu.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden'; // prevent scrolling behind menu
+    document.body.style.overflow = 'hidden';
     header.classList.add('menu-open');
   }
 
@@ -89,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileMenu.classList.remove('open');
     hamburger.setAttribute('aria-expanded', 'false');
     mobileMenu.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = ''; // restore scrolling
+    document.body.style.overflow = '';
     header.classList.remove('menu-open');
   }
 
@@ -98,12 +91,10 @@ document.addEventListener('DOMContentLoaded', () => {
     isOpen ? closeMenu() : openMenu();
   });
 
-  // Close menu when any mobile link is clicked
   mobileLinks.forEach(link => {
     link.addEventListener('click', closeMenu);
   });
 
-  // Close menu if user presses Escape key
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') closeMenu();
   });
@@ -118,7 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
         in index.html. The CSS in style.css handles the animation.
      ============================================================== */
 
-  // Add "reveal" class to section children automatically
   const revealTargets = document.querySelectorAll(
     '.about-bio, .about-credentials, .service-card, ' +
     '.contact-intro, .contact-details, .credential-block'
@@ -131,14 +121,13 @@ document.addEventListener('DOMContentLoaded', () => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          // Stop observing once revealed (saves performance)
           revealObserver.unobserve(entry.target);
         }
       });
     },
     {
-      threshold: 0.12,       // trigger when 12% of element is visible
-      rootMargin: '0px 0px -40px 0px' // small bottom offset
+      threshold: 0.12,
+      rootMargin: '0px 0px -40px 0px'
     }
   );
 
@@ -149,6 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
      5. FOOTER YEAR — Automatically keeps the copyright year current
         The <span id="year"> in index.html is updated here.
      ============================================================== */
+
   const yearSpan = document.getElementById('year');
   if (yearSpan) {
     yearSpan.textContent = new Date().getFullYear();
@@ -160,6 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
         CSS scroll-behavior: smooth natively.
         (Modern browsers handle this via CSS, so this is a fallback.)
      ============================================================== */
+
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       const targetId = this.getAttribute('href');
@@ -182,4 +173,4 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-}); // end DOMContentLoaded
+});
