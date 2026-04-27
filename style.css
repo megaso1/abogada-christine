@@ -368,7 +368,7 @@ p {
   background-color: var(--color-beige);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
+  align-items: start;
   position: relative;
   overflow: hidden;
 }
@@ -385,7 +385,7 @@ p {
 }
 
 .hero-content {
-  padding: clamp(32px, 5vw, 60px) clamp(24px, 6vw, 80px) clamp(32px, 5vw, 60px) clamp(24px, 6vw, 80px);
+  padding: clamp(60px, 10vw, 120px) clamp(24px, 6vw, 80px) clamp(60px, 10vw, 120px) clamp(24px, 6vw, 80px);
   max-width: 600px;
   animation: fadeUp 0.9s var(--ease) both;
 }
