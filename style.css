@@ -731,7 +731,6 @@ p {
   display: flex;
   flex-direction: column;
   gap: 0;
-  border-top: 1px solid var(--color-beige-2);
 }
 
 .contact-item {
@@ -763,6 +762,15 @@ a.contact-item:hover {
   line-height: 1.5;
 }
 
+@media (min-width: 901px) {
+  .contact-section-header {
+    margin-bottom: 24px;
+  }
+
+  .contact-intro {
+    margin-top: -8px; /* slight upward nudge to align with right column */
+  }
+}
 
 /* ----------------------------------------------------------------
    10. FOOTER
